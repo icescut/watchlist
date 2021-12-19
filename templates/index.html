@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name }}的电影列表</title>
+</head>
+
+<body>
+    <h2>{{ name }}的电影列表</h2>
+    <p>共{{ movies|length }}部电影</p>
+    <ul>
+        {% for movie in movies %}
+        <li>{{ movie.title }} - {{ movie.year }}</li>
+        {% endfor %}
+    </ul>
+    <footer>
+        <small>&copy; 2021 <a href="#">电影列表</a></small>
+    </footer>
+
+</body>
+
+</html>
