@@ -16,10 +16,6 @@
     {% for message in get_flashed_messages() %}
     <div class="alert">{{ message }}</div>
     {% endfor %}
-    <h2>
-        <img class='avatar' src="{{ url_for('static', filename='images/avatar.png') }}" alt="Avatar">
-        {{ user.name }}的观影清单
-    </h2>
     <nav>
         <ul>
             <li><a href="{{ url_for('index') }}">首页</a></li>

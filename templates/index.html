@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
+<h2>
+    <img class='avatar' src="{{ url_for('static', filename='images/avatar.png') }}" alt="Avatar">
+    {{ user.name }}的观影清单
+</h2>
 <p>共{{ movies|length }}部电影</p>
 {% if current_user.is_authenticated %}
 <form method="post">

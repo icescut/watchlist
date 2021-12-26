@@ -113,7 +113,7 @@ def logout():
     return redirect(url_for('index'))
 
 
-@app.route('/moive/edit/<int:movie_id>', methods=['GET', 'POST'])
+@app.route('/movie/edit/<int:movie_id>', methods=['GET', 'POST'])
 @login_required
 def edit(movie_id):
     movie = Movie.query.get_or_404(movie_id)
@@ -191,7 +191,7 @@ def forge():
         db.session.add(movie)
 
     db.session.commit()
-    click.echo('Done.')
+    click.echo('已建立模拟数据')
 
 
 @app.cli.command()
